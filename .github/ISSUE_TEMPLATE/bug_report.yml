@@ -1,0 +1,90 @@
+name: 🐛 Bug Report
+description: Report a bug, crash, or unexpected behavior in EF-Derby
+title: "[BUG]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting an issue to help improve **Derby**! Please fill out the sections below.
+
+  - type: dropdown
+    id: component
+    attributes:
+      label: Affected Component
+      description: Which area of the app is experiencing the problem?
+      options:
+        - "Match Feed & Cards"
+        - "Screenshot Extraction / OCR"
+        - "Analytics & Performance Stats"
+        - "Opponents & Head-to-Head"
+        - "Friends & Match Requests"
+        - "Auth, Profile & Settings"
+        - "App Crash / Freezing"
+        - "Other"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description
+      description: A clear and concise description of what the bug is.
+      placeholder: Describe what happened...
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: How can we reproduce this issue?
+      placeholder: |
+        1. Open the app
+        2. Go to '...'
+        3. Click on '...'
+        4. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: A clear description of what you expected to happen.
+      placeholder: What should have happened instead?
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots or Screen Recordings
+      description: Drag and drop screenshots or videos to help explain your problem.
+      placeholder: Paste images/videos here...
+
+  - type: input
+    id: device
+    attributes:
+      label: Device & Android Version
+      description: E.g., Samsung Galaxy S23 (Android 14), Pixel 10 (Android 16)
+      placeholder: e.g. Pixel 10, Android 16
+    validations:
+      required: true
+
+  - type: input
+    id: app_version
+    attributes:
+      label: Derby App Version
+      description: The version of the app installed (found in Settings).
+      placeholder: e.g. 1.0.0
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / Error Message (if available)
+      description: Paste any error messages, Logcat logs, or stack traces.
+      render: shell
+      placeholder: Paste error logs here...
